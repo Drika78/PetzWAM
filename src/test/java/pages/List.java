@@ -1,4 +1,43 @@
 package pages;
 
-public class List {
+import general.Base;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class List extends Base {
+
+
+    // 1 - Mapeamentos
+    // Texto do Resultado Para
+    @FindBy(css = "h1.h2Categoria.nomeCategoria")
+    private WebElement lblResultBy;  //lblResultadoPara
+
+    // 2 - Construtor
+    public List(WebDriver driver) {
+        super(driver);
+    }
+
+    // 3 - Métodos e Funções baseados no Mapeamento
+
+    // Lê o título da guia e devolve o texto encontrado
+    public String readTitleTab(){   //lê o título da guia
+        return driver.getTitle();
+    }
+
+    //Lê a frase Resultado pora "Produto"
+    public String readResultBy(){
+        return lblResultBy.getText();
+
+    }
+    // Clica no produto desejado
+    public void clickAtDesiredProduct(String product){ // clicarNoProdutoDesejado
+        driver.findElement(By.xpath("//h3[contains(text(),'" + product + "')]")).click();
+
+    }
+
+
+
+
 }
