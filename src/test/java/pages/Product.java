@@ -28,7 +28,7 @@ public class Product extends Base {
     }
 
     // Ler o preço atual
-    public String readPriceProduct(){
+    public String readPriceCurrent(){
         return priceCurrent.getText();
     }
 

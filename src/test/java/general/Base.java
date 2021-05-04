@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class Base {
-    protected WebDriver driver; // objeto do Selenium Webdriver
+    public WebDriver driver; // objeto do Selenium Webdriver
     // Ao usar PageFactory mudar de public para protected
 
     // Criar um construtor e inicializar os elementos do PageFactory

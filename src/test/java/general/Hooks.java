@@ -18,7 +18,7 @@ public class Hooks extends Base {
     @Before
     public void setup(){
         // Informar onde está o driver
-        System.setProperty("webdriver.chrome.driver", "drivers/chrome/89/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chrome/90/chromedriver.exe");
         // Instanciar o driver do Chrome
         base.driver = new ChromeDriver();
 
